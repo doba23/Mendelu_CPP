@@ -3,17 +3,17 @@ using namespace std;
 
 class Student{
 public:
-    string jmeno;
-    string rodneCislo;
-    int semestr;
+    string m_jmeno;
+    string m_rodneCislo;
+    int m_semestr;
 
     void setSemestr(int novySemestr){
         if (novySemestr < 1) {
-            cout << "Nemuze byt nulovy, nebo zaporny semestr" << endl;
-            semestr = 1;
+            cout << "Nemuze byt nulovy, nebo zaporny m_semestr" << endl;
+            m_semestr = 1;
         }
         else {
-            semestr = novySemestr;
+            m_semestr = novySemestr;
         }
     }
 
@@ -22,37 +22,37 @@ public:
             cout << "Nespravne zadene rodne cislo. Zadej rodne cislo ve formatu: 870229/8974" << endl;
         }
         else{
-            cout << "Rodne cislo uzivatele: " << jmeno << " bylo spravne zadano. \n";
-            rodneCislo = noveRodneCislo;
+            cout << "Rodne cislo uzivatele: " << m_jmeno << " bylo spravne zadano. \n";
+            m_rodneCislo = noveRodneCislo;
         }
     }
 
     int getSemestr(){
-        return semestr;
+        return m_semestr;
     }
 
     string getRodneCislo(){
-        return rodneCislo;
+        return m_rodneCislo;
     }
 
     void printinfo(){
         cout << "vypsani vsech informaci o studentu metodou printinfo:" << endl;
-        cout << "Jmeno: " << jmeno << endl;
-        cout << "Rodne cislo: " << rodneCislo << endl;
-        cout << "Semestr: " << semestr << endl;
+        cout << "Jmeno: " << m_jmeno << endl;
+        cout << "Rodne cislo: " << m_rodneCislo << endl;
+        cout << "Semestr: " << m_semestr << endl;
     }
 };
 
 int main() {
     //nastaveni studenta Dominika
     Student* studentDominik = new Student();
-    studentDominik->jmeno = "Dominik";
+    studentDominik->m_jmeno = "Dominik";
     studentDominik->setRodnecislo("123444/8745") ;
-    studentDominik->semestr = 2;
+    studentDominik->m_semestr = 2;
 
     //vypasni studenta Dominika
-    cout << "Jmeno studenta je: " << studentDominik->jmeno << "\n";
-    cout << "Semestr studenta: " << studentDominik->semestr << endl;
+    cout << "Jmeno studenta je: " << studentDominik->m_jmeno << "\n";
+    cout << "Semestr studenta: " << studentDominik->m_semestr << endl;
     cout << endl;
 
     //printinfo o Dominiku
@@ -61,14 +61,14 @@ int main() {
 
     //nastaveni studenta Petra
     Student* studentPetr = new Student();
-    studentPetr-> jmeno = "Petr";
+    studentPetr-> m_jmeno = "Petr";
     studentPetr->setRodnecislo("456194/7894");
     studentPetr->setSemestr(4); //nastaveni semestru pres setter
     cout << endl;
 
     //vzpsani studenta Petra
-    cout << "Jmeno studenta je: " << studentPetr->jmeno << "\n";
-    cout << "Semestr studenta: " << studentPetr->semestr << "\n";
+    cout << "Jmeno studenta je: " << studentPetr->m_jmeno << "\n";
+    cout << "Semestr studenta: " << studentPetr->m_semestr << "\n";
     cout << "Rodne cislo: " << studentPetr->getRodneCislo() << endl;
 
     //test
