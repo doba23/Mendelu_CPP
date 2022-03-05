@@ -25,5 +25,6 @@ int main() {
 
 
     delete studentDominik;
+    delete studentPetr;
     return 0;
 }
