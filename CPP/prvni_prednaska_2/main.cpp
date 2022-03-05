@@ -1,6 +1,15 @@
 #include <iostream>
+using namespace std;
+
+class Student:{
+private:
+    string jmeno;
+    string rodneCislo;
+    int semestr;
+};
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+
+    cout << "Hello, World!" << endl;
     return 0;
 }
