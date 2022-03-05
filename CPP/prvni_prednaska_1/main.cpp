@@ -9,6 +9,9 @@ public:
 };
 
 int main() {
-
+    Auto* mojeHonda;
+    mojeHonda = new Auto;
+    mojeHonda ->barva = "modra";
+    delete (mojeHonda);
     return 0;
 }
