@@ -6,6 +6,10 @@ public:
     string jmeno;
     string rodneCislo;
     int semestr;
+
+    void setSemestr(int novySemestr){
+        semestr = novySemestr;
+    }
 };
 
 int main() {
@@ -18,7 +22,7 @@ int main() {
 
     Student* studentPetr = new Student();
     studentPetr-> jmeno = "Petr";
-    studentPetr-> semestr = 4;
+    studentPetr->setSemestr(1); //nastaveni semestru pres setter
 
     cout << "Jmeno studenta je: " << studentPetr->jmeno << "\n";
     cout << "Semestr studenta: " << studentPetr->semestr << endl;
