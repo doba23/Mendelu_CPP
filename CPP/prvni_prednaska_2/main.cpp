@@ -16,6 +16,14 @@ int main() {
     cout << "Jmeno studenta je: " << studentDominik->jmeno << "\n";
     cout << "Semestr studenta: " << studentDominik->semestr << endl;
 
+    Student* studentPetr = new Student();
+    studentPetr-> jmeno = "Petr";
+    studentPetr-> semestr = 4;
+
+    cout << "Jmeno studenta je: " << studentPetr->jmeno << "\n";
+    cout << "Semestr studenta: " << studentPetr->semestr << endl;
+
+
     delete studentDominik;
     return 0;
 }
