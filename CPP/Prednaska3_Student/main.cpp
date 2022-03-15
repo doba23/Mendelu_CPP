@@ -5,13 +5,13 @@ class Student{
     string m_jmeno;
     int m_semestr;
     float m_prumer;
-    float m_soucetStipendii;
+    float m_vyplaceno_Stipendii;
 public:
     Student (string jmeno,int semestr,float prumer){
         m_jmeno = jmeno;
         m_semestr = semestr;
         m_prumer = prumer;
-        m_soucetStipendii = 0.0;
+        m_vyplaceno_Stipendii = 0.0;
 }
     float aktualniStipendium(){
         float aktualniVyse= ((1000*m_prumer)+(m_semestr*100));
@@ -19,18 +19,20 @@ public:
     }
 
     void printSoucetStipendii(){
-        cout << "Vyplaceno: " << m_soucetStipendii << endl;
+        cout << "Vyplaceno: " << m_vyplaceno_Stipendii << endl;
         cout << "Aktualni vyse stipendia: " << aktualniStipendium()  << endl;
     }
 
-    void setAddSoucetStipedndii() {
-        m_soucetStipendii += aktualniStipendium();
+    void prictiStipedndia() {
+        m_vyplaceno_Stipendii += aktualniStipendium();
     }
 
 };
 
 int main() {
-    Student* dominik = new Student("Dominik", 2, 3.5);
+    Student* dominik = new Student("Dominik", 2, 2.5);
+    dominik->printSoucetStipendii();
+    dominik->prictiStipedndia();
     dominik->printSoucetStipendii();
     return 0;
 }
