@@ -34,5 +34,6 @@ int main() {
     dominik->printSoucetStipendii();
     dominik->prictiStipedndia();
     dominik->printSoucetStipendii();
+    delete dominik;
     return 0;
 }
