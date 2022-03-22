@@ -64,5 +64,13 @@ int main() {
     Auto* volvo = new Auto(5000.0, "Anicka");
     Auto* dacia = new Auto( "596E","Salim");
     volvo->printInfo();
+
+    delete honda;
+    delete skoda;
+    delete ferrari;
+    delete bugatti;
+    delete mazda;
+    delete volvo;
+    delete dacia;
     return 0;
 }
