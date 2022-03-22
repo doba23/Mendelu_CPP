@@ -41,11 +41,28 @@ public:
         m_pocetKm = 0.0;
         m_predchoziMajitel = predchoziMajitel;
     }
+    Auto (){
+        m_SPZ = "";
+        m_pocetKm = 0.0;
+        m_predchoziMajitel = "";
+    }
 
+    void printInfo(){
+        cout << "SPZ: " << m_SPZ << endl;
+        cout << "Pocet najetych Km: " << m_pocetKm << endl;
+        cout << "Predchozi majitel/ka: " << m_predchoziMajitel << endl;
+    }
 
 };
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    Auto* honda = new Auto("4AX","Tom");
+    Auto* skoda = new Auto("5B3");
+    Auto* ferrari = new Auto("AAA", 156.3, "Ital");
+    Auto* bugatti = new Auto(5000.0);
+    Auto* mazda = new Auto("8UA", 156321.0);
+    Auto* volvo = new Auto(5000.0, "Anicka");
+    Auto* dacia = new Auto( "596E","Salim");
+    volvo->printInfo();
     return 0;
 }
