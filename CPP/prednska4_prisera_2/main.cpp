@@ -18,6 +18,10 @@ public:
     void priseraJeNapadena(int silaProtivnika){
         m_zivoty -= silaProtivnika;
     }
+
+    void priseraJeNapadena2(Prisera* prisera){
+        m_zivoty -= prisera->getSilaUtoku();
+    }
 };
 int main() {
 
@@ -29,8 +33,8 @@ int main() {
     cout << "Zdravi donia: " << donio->getPocetZivotu() << endl;
 
     cout << "Utok alfonse na donia." << endl;
-    donio->priseraJeNapadena(alfons->getSilaUtoku());
-
+//    donio->priseraJeNapadena(alfons->getSilaUtoku());
+    donio->priseraJeNapadena2(alfons);
     cout << "Sila alfonse: " << alfons->getSilaUtoku() << endl;
     cout << "Zdravi alfonse: " << alfons->getPocetZivotu() << endl;
     cout << "Sila donia: " << donio->getSilaUtoku() << endl;
