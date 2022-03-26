@@ -5,6 +5,9 @@ class Game{
 private:
     static string s_jmeno;
     static int s_pocetBodu;
+
+    Game(){} // bezparametricky konstruktor - nelze vytvorit objekt teto tridy
+
 public:
     static int getPocetBodu(){
         return s_pocetBodu;
@@ -25,9 +28,11 @@ int Game::s_pocetBodu = 0;
 string Game::s_jmeno = "zadej jmeno";
 
 int main() {
-    Game* prvni = new Game;
-    prvni->setBody(4);
-    prvni->setJmeno("Dominik");
+//    Game* prvni = new Game;
+//    prvni->setBody(4);
+    Game::setBody(4);
+//    prvni->setJmeno("Dominik");
+    Game::setJmeno("Dominik");
     cout << Game::getPocetBodu() << endl;
     cout << Game::getJmenoHrace() << endl;
     return 0;
