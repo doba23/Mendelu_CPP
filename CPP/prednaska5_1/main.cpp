@@ -14,19 +14,18 @@ public:
 
 class Rytir {
     int m_obrana;
-    Brneni* m_neseneBrneni; // u bezneho zpusobi zde tato hodnota neni
+    Brneni* m_neseneBrneni;
 public:
     Rytir(int obrana){
         m_obrana = obrana;
-        m_neseneBrneni = nullptr; // u bezneho zpusobi zde tato hodnota neni
+        m_neseneBrneni = nullptr;
     }
     void seberBrneni (Brneni* brneni){
-//        m_obrana += brneni->getBonusObrany(); // bezny zpusob
         m_neseneBrneni = brneni;
     }
 
     void zahodBrneni(){
-        m_obrana = 0;
+        m_neseneBrneni = nullptr;
     }
 
     int getObrana(){
@@ -34,7 +33,7 @@ public:
             return m_obrana;
         }
         else {
-            return m_obrana += m_neseneBrneni->getBonusObrany();
+            return m_obrana + m_neseneBrneni->getBonusObrany();
         }
 
     }
@@ -43,7 +42,11 @@ public:
 int main() {
     Brneni* helma = new Brneni(15);
     Rytir* jan = new Rytir(15);
+
+    cout << "Rytir ma schopnost obrany:" << jan->getObrana() << endl;
     jan->seberBrneni(helma);
+    cout << "Rytir ma schopnost obrany:" << jan->getObrana() << endl;
+    jan->zahodBrneni();
     cout << "Rytir ma schopnost obrany:" << jan->getObrana() << endl;
     delete helma;
     delete jan;
