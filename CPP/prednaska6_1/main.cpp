@@ -41,6 +41,8 @@ public:
 
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
+    Car* hondaCivic = new Car ("marian blue", 120);
+    hondaCivic->printInfo();
+    delete hondaCivic;
     return 0;
 }
