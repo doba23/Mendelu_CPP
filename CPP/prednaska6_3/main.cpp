@@ -45,7 +45,7 @@ public:
 
 
 int main() {
-    NoveAuto* honda = new NoveAuto({4.3,4.2,4.1,4.4});
+     NoveAuto* honda = new NoveAuto({4.3,4.2,4.1,4.4});
     cout << "Tlak: " << honda->getTlakPneumatik(0) << endl;
     honda->setTlakPneumatik(0, 4.5);
     cout << "Tlak: " << honda->getTlakPneumatik(0) << endl;
